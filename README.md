@@ -1,4 +1,4 @@
-# authenticator-d06eb8
+# authenticator-3ebb7c
 
 A Python authenticator utility.
 
